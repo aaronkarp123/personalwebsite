@@ -24,31 +24,6 @@ const PORTFOLIO_PROJECTS = [
                 `
             },
             {
-                title: "Audio & Video Player",
-                icon: "fa-circle-play",
-                openByDefault: true,
-                content: `
-                    <div class="embed-wrapper">
-                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&color=%23ff6699&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                    </div>
-                    <p class="media-caption">Full stereo stream. Produced with vintage analog synthesizer modules.</p>
-                `
-            },
-            {
-                title: "Scores & Sheet Music",
-                icon: "fa-music",
-                openByDefault: false,
-                content: `
-                    <div class="score-preview-box">
-                        <div class="score-info">
-                            <strong>🎼 Full Orchestral & Synth Score (PDF)</strong>
-                            <p>Includes complete graphic notation, synth patch cues, and performance instructions.</p>
-                        </div>
-                        <a href="sample.pdf" target="_blank" class="badge-btn"><i class="fa-solid fa-file-pdf"></i> View / Download Score (PDF)</a>
-                    </div>
-                `
-            },
-            {
                 title: "Technical Details",
                 icon: "fa-book-bookmark",
                 openByDefault: false,
@@ -70,23 +45,6 @@ const PORTFOLIO_PROJECTS = [
                     <p>Date: January, 2022
                     <p>Location: Granoff Center for the Creative Arts, Providence, RI
                 </div>
-                `
-            },
-            {
-                title: "Project Images & Visual Stills",
-                icon: "fa-image",
-                openByDefault: false,
-                content: `
-                    <div class="art-gallery">
-                        <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
-                            <span class="caption">Visual Patch Diagram</span>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" alt="Projection Still">
-                            <span class="caption">Live Projection Still</span>
-                        </div>
-                    </div>
                 `
             }
         ]
@@ -98,78 +56,14 @@ const PORTFOLIO_PROJECTS = [
         subtitle: "An exploratory transit EP",
         sections: [
             {
-                title: "Audio Player",
+                title: "Bandcamp Link",
                 icon: "fa-circle-play",
                 openByDefault: true,
                 content: `
                     <div class="bandcamp-container">
-                        <iframe style="border: 0; width: 100%; height: 588px;" src="https://bandcamp.com/EmbeddedPlayer/album=1531392687/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://oddegg.bandcamp.com/album/4-ways-to-get-home">4 Ways to Get Home by oddegg</a></iframe>
-                    </div>
-                `
-            },
-            {
-                title: "Audio & Video Player",
-                icon: "fa-circle-play",
-                openByDefault: true,
-                content: `
-                    <div class="embed-wrapper">
-                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&color=%23ff6699&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                    </div>
-                    <p class="media-caption">Full stereo stream. Produced with vintage analog synthesizer modules.</p>
-                `
-            },
-            {
-                title: "Scores & Sheet Music",
-                icon: "fa-music",
-                openByDefault: false,
-                content: `
-                    <div class="score-preview-box">
-                        <div class="score-info">
-                            <strong>🎼 Full Orchestral & Synth Score (PDF)</strong>
-                            <p>Includes complete graphic notation, synth patch cues, and performance instructions.</p>
-                        </div>
-                        <a href="sample.pdf" target="_blank" class="badge-btn"><i class="fa-solid fa-file-pdf"></i> View / Download Score (PDF)</a>
-                    </div>
-                `
-            },
-            {
-                title: "Technical Details",
-                icon: "fa-book-bookmark",
-                openByDefault: false,
-                content: `
-                    <div class="doc-text">
-                        <p>Form: Installation</p>
-                        <p>Completed: 2022</p>
-                        <p>Materials: Glass, Transducers</p>
-                        <p>Components: Raspberry Pi, Amplifier, Transducers x 2</p>
-                    </div>
-                `
-            },
-            {
-                title: "Installed",
-                icon: "fa-paint-roller",
-                openByDefault: false,
-                content: `
-                <div class="doc-text">
-                    <p>Date: January, 2022
-                    <p>Location: Granoff Center for the Creative Arts, Providence, RI
-                </div>
-                `
-            },
-            {
-                title: "Project Images & Visual Stills",
-                icon: "fa-image",
-                openByDefault: false,
-                content: `
-                    <div class="art-gallery">
-                        <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
-                            <span class="caption">Visual Patch Diagram</span>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" alt="Projection Still">
-                            <span class="caption">Live Projection Still</span>
-                        </div>
+                        <a href="https://oddegg.bandcamp.com/album/4-ways-to-get-home" target="_blank" >
+                            <img src="https://f4.bcbits.com/img/a2603072358_10.jpg?auto=format" alt="Score Notation Artwork">
+                        </a>
                     </div>
                 `
             }
