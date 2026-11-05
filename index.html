@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophia's Cyber Space</title>
+    
+    <!-- Sparkle Emoji Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Sky Background Container (Dynamically set to sunrise/sunset on load) -->
+    <div id="sky-bg-layer" class="sky-layer"></div>
+
+    <!-- Main Container / Window -->
+    <div class="container">
+        
+        <!-- Header & Window Controls -->
+        <header class="y2k-header">
+            <div class="window-bar">
+                <span class="window-title">💖 my personal website 💖</span>
+                <div class="window-controls">
+                    <button class="win-btn minimize">_</button>
+                    <button class="win-btn maximize">□</button>
+                    <button class="win-btn close">✕</button>
+                </div>
+            </div>
+            
+            <div class="header-banner">
+                <h1 class="glitch-title">★ SOPHIA KARP ★</h1>
+                <p class="marquee-text"><marquee scrollamount="5">✨ Welcome to Sophia Karp's official digital space! Check out my art & music, publications, and blog! ✨</marquee></p>
+            </div>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="y2k-nav">
+            <a href="#about" class="nav-btn active"><i class="fa-solid fa-heart"></i> About Me</a>
+            <a href="#art-music" class="nav-btn"><i class="fa-solid fa-music"></i> Art & Music</a>
+            <a href="#publications" class="nav-btn"><i class="fa-solid fa-book-open"></i> Publications</a>
+            <a href="#blog" class="nav-btn"><i class="fa-solid fa-pen-nib"></i> Blog</a>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+
+            <!-- ABOUT ME SECTION -->
+            <section id="about" class="tab-section active">
+                <div class="card">
+                    <div class="card-header">
+                        <h2><i class="fa-solid fa-user-sparkles"></i>~~Me~~</h2>
+                    </div>
+                    <div class="card-body about-grid">
+                        <div class="profile-pic-box">
+                            <img src="https://github.com/aaronkarp123/personalwebsite/blob/afedfa678a4330bf21b05afa3616893dcacbbe39/Crop1.jpg?auto=format&fit=crop&w=400&q=80" alt="Sophia Karp Avatar" class="profile-img">
+                            <div class="status-badge"> ^^ me ^^</div>
+                        </div>
+                        <div class="about-text">
+                            <h3>Hello, I'm Sophia Karp!</h3>
+                            <p>Welcome to my website. I am an artist, musician, researcher, and data architect. You should find everything you need here, but let me know if there's more you'd like to see :).</p>
+                            
+                            <div class="custom-details">
+                                <p><strong>👍 Likes:</strong> Frogs, chai, Eliane Radigue, some bugs, Pride & Prejudice (2005)</p>
+                                <p><strong>👎 Dislikes:</strong> Feeling too hot under heavy blankets, other bugs, scraping my knuckles on a whetstone, finding frames for art</p>
+                                <p><strong>📍 Location:</strong> Computer / Philadelphia</p>
+                                <p><strong>💌 Contact:</strong> <a href="mailto:sophiakarp3@example.com">sophiakarp3@gmail.com</a></p>
+                            </div>
+
+                            <!--<div class="social-links">
+                                <a href="https://youtube.com" target="_blank" class="badge-btn"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                                <a href="https://soundcloud.com" target="_blank" class="badge-btn"><i class="fa-brands fa-soundcloud"></i> SoundCloud</a>
+                                <a href="https://github.com" target="_blank" class="badge-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                                <a href="https://instagram.com" target="_blank" class="badge-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ART & MUSIC SECTION (LOADED DYNAMICALLY FROM JS/PORTFOLIO.JS) -->
+            <section id="art-music" class="tab-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2><i class="fa-solid fa-compact-disc"></i> Creative Portfolio</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="section-intro">Click any item's expandable tabs to view the content.</p>
+
+                        <!-- Dynamic Portfolio Container -->
+                        <div id="portfolio-projects-container" class="projects-list">
+                            <!-- Populated dynamically via main.js and portfolio.js -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PUBLICATIONS SECTION -->
+            <section id="publications" class="tab-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2><i class="fa-solid fa-scroll"></i> Publications & Papers</h2>
+                    </div>
+                    <div class="card-body">
+                        
+                        <div class="pub-list">
+                            <div class="pub-item">
+                                <div class="pub-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                                <div class="pub-details">
+                                    <h4>Aesthetics of the Early Web: Y2K Nostalgia in Modern Interface Design</h4>
+                                    <p class="authors"><strong>Sophia Karp</strong>, Co-Author (2025)</p>
+                                    <p class="venue">Published in <em>Journal of Digital Culture & Aesthetics</em></p>
+                                    <div class="pub-links">
+                                        <a href="sample.pdf" target="_blank" class="badge-btn"><i class="fa-solid fa-download"></i> Download PDF</a>
+                                        <a href="https://doi.org" target="_blank" class="badge-btn"><i class="fa-solid fa-link"></i> DOI / External Link</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pub-item">
+                                <div class="pub-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                                <div class="pub-details">
+                                    <h4>Generative Soundscapes and Interactive Audio Nodes</h4>
+                                    <p class="authors"><strong>Sophia Karp</strong> (2024)</p>
+                                    <p class="venue">Presented at the <em>International Web Sound Symposium</em></p>
+                                    <div class="pub-links">
+                                        <a href="sample.pdf" target="_blank" class="badge-btn"><i class="fa-solid fa-download"></i> Download PDF</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BLOG SECTION WITH SEARCH -->
+            <section id="blog" class="tab-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2><i class="fa-solid fa-heart-pulse"></i> Sophia's Cyber Blog</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="section-intro">Thoughts, updates, dreams...</p>
+
+                        <!-- Search Bar Input -->
+                        <div class="search-box">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input type="text" id="blog-search" placeholder="Search blog posts..." onkeyup="filterBlogPosts()">
+                        </div>
+                        
+                        <div id="blog-posts-container">
+                            <!-- Blog posts loaded dynamic via main.js & posts.js -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="y2k-footer">
+            <p>this is where I would put a copyright line but I don't really know how copyright works 💕</p>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/portfolio.js"></script>
+    <script src="js/posts.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
