@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
  */
 function initRandomSkyBackground() {
     const isSunrise = Math.random() < 0.5;
+    const randomProf = Math.random();
     const body = document.body;
 
     if (isSunrise) {
@@ -26,6 +27,16 @@ function initRandomSkyBackground() {
     } else {
         body.classList.add("sky-sunset");
         body.classList.remove("sky-sunrise");
+    }
+
+    if (randomProf < 0.333333){
+        document.getElementById("sophiakprofile").src="images/Crop1.jpg";
+    }
+    else if (randomProf < 0.6666666){
+        document.getElementById("sophiakprofile").src="images/Crop2.jpg";
+    }
+    else {
+        document.getElementById("sophiakprofile").src="images/Crop3.jpg";
     }
 }
 
