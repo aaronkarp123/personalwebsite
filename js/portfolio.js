@@ -8,11 +8,21 @@
 
 const PORTFOLIO_PROJECTS = [
     {
-        id: "aqua-dreamscape",
-        tag: "MUSIC & SCORE",
-        title: '🎵 "Aqua Dreamscape" (Composition & Visual Suite)',
-        subtitle: "An ambient synth composition paired with interactive visual projections.",
+        id: "the-flock",
+        tag: "Sound Art Installation",
+        title: 'The Flock Takes Shelter in the Storm',
+        subtitle: "A soundscape collage, using recordings from hikes in Western Massachusetts and Rhode Island, and excerpts of a piece for solo cello performed by Benjamin Karp.",
         sections: [
+            {
+                title: "Video Player",
+                icon: "fa-video",
+                openByDefault: true,
+                content: `
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/arOtxkbTRgg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                `
+            },
             {
                 title: "Audio & Video Player",
                 icon: "fa-circle-play",
@@ -39,17 +49,29 @@ const PORTFOLIO_PROJECTS = [
                 `
             },
             {
-                title: "Technical Documentation & Process Notes",
+                title: "Technical Details",
                 icon: "fa-book-bookmark",
                 openByDefault: false,
                 content: `
                     <div class="doc-text">
-                        <p><strong>Instrumentation:</strong> Sequential Prophet-6, Moog Sub 37, Granular Reverb, Chamber Strings.</p>
-                        <p><strong>Composition Technique:</strong> Built around microtonal harmonic cycles and generative LFO modulation. Tuning calibrated to A4 = 432Hz.</p>
-                        <p><strong>Performance Requirements:</strong> 4-channel surround playback or stereo PA with subwoofer.</p>
+                        <p>Form: Installation</p>
+                        <p>Completed: 2022</p>
+                        <p>Materials: Glass, Transducers</p>
+                        <p>Components: Raspberry Pi, Amplifier, Transducers x 2</p>
                     </div>
                 `
             },
+            {
+                title: "Installed",
+                icon: "",
+                openByDefault: false,
+                content: `
+                <div class="doc-text">
+                    <p>Installed: January, 2022
+                    <p>Location: Granoff Center for the Creative Arts, Providence, RI
+                </div>
+                `
+            }
             {
                 title: "Project Images & Visual Stills",
                 icon: "fa-image",
