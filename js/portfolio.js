@@ -63,7 +63,7 @@ const PORTFOLIO_PROJECTS = [
             },
             {
                 title: "Installed",
-                icon: "",
+                icon: "fa-paint-roller",
                 openByDefault: false,
                 content: `
                 <div class="doc-text">
@@ -71,7 +71,7 @@ const PORTFOLIO_PROJECTS = [
                     <p>Location: Granoff Center for the Creative Arts, Providence, RI
                 </div>
                 `
-            }
+            },
             {
                 title: "Project Images & Visual Stills",
                 icon: "fa-image",
