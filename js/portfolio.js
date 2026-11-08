@@ -115,22 +115,22 @@ const PORTFOLIO_PROJECTS = [
                 content: `
                     <div class="art-gallery">
                         <div class="gallery-item">
-                            <img src="images/readwrite0?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                            <img src="../images/readwrite0?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite1?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                            <img src="../images/readwrite1?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite2?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                            <img src="../images/readwrite2?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite3?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                            <img src="../images/readwrite3?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite4?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                            <img src="../images/readwrite4?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite5?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                            <img src="../images/readwrite5?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
                         </div>
                     </div>
                 `
