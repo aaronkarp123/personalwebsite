@@ -43,7 +43,7 @@ const PORTFOLIO_PROJECTS = [
                 content: `
                 <div class="doc-text">
                     <p>Date: January, 2022
-                    <p>Location: Granoff Center for the Creative Arts, Providence, RI
+                    <p>Location: Granoff Center for the Creative Arts, Providence, RI</p>
                 </div>
                 `
             }
@@ -64,6 +64,74 @@ const PORTFOLIO_PROJECTS = [
                         <a href="https://oddegg.bandcamp.com/album/4-ways-to-get-home" target="_blank" >
                             <img src="https://f4.bcbits.com/img/a2603072358_10.jpg?auto=format" alt="Score Notation Artwork">
                         </a>
+                    </div>
+                `
+            }
+        ]
+    },
+    {
+        id: "read-write",
+        tag: "Sound Art Installation",
+        title: 'Read / Write',
+        subtitle: "What begins as a blank slate is transformed over the course of days and weeks as the paint brush slowly cuts down into the vinyl. The record turns from smooth static to rhythmic loops of noise that will continue to develop indefinitely as the micro movements of the bristles shift.",
+        sections: [
+            {
+                title: "Video Player",
+                icon: "fa-video",
+                openByDefault: true,
+                content: `
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/iNLZMcmS4eI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                `
+            },
+            {
+                title: "Technical Details",
+                icon: "fa-book-bookmark",
+                openByDefault: false,
+                content: `
+                    <div class="doc-text">
+                        <p>Form: Installation</p>
+                        <p>Completed: 2020</p>
+                        <p>Materials: Record Player, Uncut Vinyl, Brush, String</p>
+                    </div>
+                `
+            },
+            {
+                title: "Installed",
+                icon: "fa-paint-roller",
+                openByDefault: false,
+                content: `
+                <div class="doc-text">
+                    <p>Date: January, 2020
+                    <p>Kyoto University of Art and Design, Kyoto, Japan</p>
+                </div>
+                `
+            },
+            {
+                title: "Images",
+                icon: "fa-image",
+                openByDefault: false,
+                content: `
+                    <div class="art-gallery">
+                        <div class="gallery-item">
+                            <img src="images/readwrite0?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/readwrite1?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/readwrite2?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/readwrite3?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/readwrite4?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/readwrite5?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                        </div>
                     </div>
                 `
             }
