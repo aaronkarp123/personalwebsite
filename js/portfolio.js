@@ -441,5 +441,47 @@ const PORTFOLIO_PROJECTS = [
                 `
             },
         ]
-    }
+    },
+    {
+        id: "restrained-form",
+        tag: "Sound Art Installation",
+        title: 'Restrained Form',
+        subtitle: "This work is centered around restraint and its origins. A bass shaker underneath the wooden plank has three different frequencies running through it in isolation and combination. Each frequency accentuates the vibration of one of the three elements of the structure: the board, the sheet, and the rope. The sporatic bursts of energy give the structure a lifelike quality, accentuating its struggle and ultimate inability to escape.",
+        sections: [
+            {
+                title: "Video Player",
+                icon: "fa-video",
+                openByDefault: true,
+                content: `
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/1gMaHXmhG6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                `
+            },
+            {
+                title: "Technical Details",
+                icon: "fa-book-bookmark",
+                openByDefault: false,
+                content: `
+                    <div class="doc-text">
+                        <p>Form: Installation</p>
+                        <p>Completed: 2017</p>
+                        <p>Materials: Wood, Sheet Metal, Rope, Bass Shaker, Arduino</p>
+                        <p>Dimensions: 8ft. x 5ft. x 8in.</p>
+                    </div>
+                `
+            },
+            {
+                title: "Installed",
+                icon: "fa-paint-roller",
+                openByDefault: false,
+                content: `
+                <div class="doc-text">
+                    <p>Date: November, 2017
+                    <p>Location: Dartmouth College, Hanover, NH</p>
+                </div>
+                `
+            }
+        ]
+    },
 ];
