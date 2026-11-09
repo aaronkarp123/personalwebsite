@@ -272,6 +272,70 @@ const PORTFOLIO_PROJECTS = [
         ]
     },
     {
+        id: "with-in",
+        tag: "Sound Art Installation",
+        title: 'with in',
+        subtitle: "An exploration of sociality through sound, sight, and time. Based on an algorithm that describes bird flocking patterns, this work bends the forces dictating behavior to continuously create new modes of interaction. Each time \'with in\' is run it develops in a unique way, such that each execution is different. This creation, sometimes sudden and other times gradual, is reflected in the modulation of a representative soundscape. The audience is both observer and disruptor as they exist inside of a generative process of building and breaking social connections. The work started every night at sundown and continued until sunrise, at which time the screen would be replaced with a countdown clock for the following sunset.'",
+        sections: [
+            {
+                title: "Video Player",
+                icon: "fa-video",
+                openByDefault: true,
+                content: `
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/iBB1GTTgMxg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                `
+            },
+            {
+                title: "Technical Details",
+                icon: "fa-book-bookmark",
+                openByDefault: false,
+                content: `
+                    <div class="doc-text">
+                        <p>Form: Multimedia Installation</p>
+                        <p>Completed: 2018</p>
+                        <p>Hardware: Projector, Microphone, Computer, 3.1 Speaker System</p>
+                        <p>Software: Max MSP, Processing (<a href="https://github.com/aaronkarp123/within" target="_blank">code base</a>)</p>
+                    </div>
+                `
+            },
+            {
+                title: "Installed",
+                icon: "fa-paint-roller",
+                openByDefault: false,
+                content: `
+                <div class="doc-text">
+                    <p>Date: November, 2018
+                    <p>Location: Black Family Visual Arts Center, Hanover, NH</p>
+                </div>
+                `
+            },
+            {
+                title: "Images",
+                icon: "fa-image",
+                openByDefault: false,
+                content: `
+                    <div class="art-gallery">
+                        <div class="gallery-item">
+                            <img src="images/within0.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/within1.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/within2.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/within3.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                        </div>
+                        
+                    </div>
+                `
+            }
+        ]
+    },
+    {
         id: "sample-1",
         tag: "EXAMPLE ONE",
         title: 'The Flock Takes Shelter in the Storm',
