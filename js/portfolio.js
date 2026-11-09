@@ -115,26 +115,81 @@ const PORTFOLIO_PROJECTS = [
                 content: `
                     <div class="art-gallery">
                         <div class="gallery-item">
-                            <img src="images/readwrite0.jpg?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                            <img src="images/readwrite0.jpg" alt="Score Notation Artwork">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite1.jpg?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                            <img src="images/readwrite1.jpg" alt="Score Notation Artwork">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite2.jpg?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                            <img src="images/readwrite2.jpg" alt="Score Notation Artwork">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite3.jpg?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                            <img src="images/readwrite3.jpg" alt="Score Notation Artwork">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite4.jpg?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                            <img src="images/readwrite4.jpg" alt="Score Notation Artwork">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite5.jpg?auto=format&fit=crop&w=400&q=80" alt="Score Notation Artwork">
+                            <img src="images/readwrite5.jpg" alt="Score Notation Artwork">
                         </div>
                     </div>
                 `
             }
+        ]
+    },
+    {
+        id: "kaze",
+        tag: "Sound Art Installation",
+        title: '風は渡る 「the wind crosses」',
+        subtitle: "This work creates a sonic equivalent to the visual experience of standing on the bridge nestled between the Western and Japanese homes. There are seven wind chimes in two different styles, which were derived from the architectural foci of the separate buildings, using stained glass and shouji respectively. While the visual field consists of a clear separation between Japan and the West, the sounds of the two different styles of wind chimes mix to create a palette that is neither clearly Japanese nor Western, but occupies a space in between.<br>この作品は、西洋と日本の家をつなぐ橋に設置しており、その二つの建物が関係するサウンドスケープを作り出したものである。ステンドグラスと、障子戸を、別々の建物素材のモチーフとし、2つの異なるスタイルの7つの風鈴を用いている。それらは日本と西洋の明確な分離で構成されているが、2つの異なるスタイルの風鈴の音が混ざり合うことで、日本でも西洋でもないパレットの音色が生まれる。",
+        sections: [
+            {
+                title: "Video Player",
+                icon: "fa-video",
+                openByDefault: true,
+                content: `
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/vq9py99fM30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                `
+            },
+            {
+                title: "Technical Details",
+                icon: "fa-book-bookmark",
+                openByDefault: false,
+                content: `
+                    <div class="doc-text">
+                        <p>Form: Installation</p>
+                        <p>Completed: 2019</p>
+                        <p>Materials: Stained Glass, Bells, Wood, Shouji -- ステンドグラス、風鈴、障子紙、サイズ可変</p>
+                        <p>Components: Glass Chimes x 3, Bell Chimes x 4</p>
+                    </div>
+                `
+            },
+            {
+                title: "Installed",
+                icon: "fa-paint-roller",
+                openByDefault: false,
+                content: `
+                <div class="doc-text">
+                    <p>Date: November, 2019
+                    <p>Location: 和中湾 (Wachu-an), Kyoto, Japan</p>
+                </div>
+                `
+            },
+            {
+                title: "Documentation",
+                icon: "fa-readme",
+                openByDefault: false,
+                content: `
+                    <div class="score-preview-box">
+                        <div class="score-info">
+                            <strong>Exhibition Program (PDF)</strong>
+                        </div>
+                        <a href="files/kazeprogram.pdf" target="_blank" class="badge-btn"><i class="fa-solid fa-file-pdf"></i> View / Download Program (PDF)</a>
+                    </div>
+                `
+            },
         ]
     },
     {
