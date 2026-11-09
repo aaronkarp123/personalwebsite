@@ -381,6 +381,68 @@ const PORTFOLIO_PROJECTS = [
         ]
     },
     {
+        id: "traces",
+        tag: "Sound Design",
+        title: 'Traces',
+        subtitle: "A short film exploring social identity, community and evolution.",
+        sections: [
+            {
+                title: "Video Player",
+                icon: "fa-video",
+                openByDefault: true,
+                content: `
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/U1ws99j5U8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                `
+            }
+        ]
+    },
+    {
+        id: "introduction",
+        tag: "Music",
+        title: 'Introduction',
+        subtitle: "A journey towards and through disintegration.",
+        sections: [
+            {
+                title: "Audio Player",
+                icon: "fa-circle-play",
+                openByDefault: true,
+                content: `
+                    <div class="soundcloud-container">
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A388952625&color=%23dcccd4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/aaronkarp" title="Sophia Karp" target="_blank" style="color: #cccccc; text-decoration: none;">Sophia Karp</a> · <a href="https://soundcloud.com/aaronkarp/introduction" title="Introduction" target="_blank" style="color: #cccccc; text-decoration: none;">Introduction</a></div>
+                    </div>
+                `
+            },
+            {
+                title: "Technical Details",
+                icon: "fa-book-bookmark",
+                openByDefault: false,
+                content: `
+                    <div class="doc-text">
+                        <p>Form: Fixed Media</p>
+                        <p>Completed: 2018</p>
+                        <p>Tools: Analog Synthesizer, Digital Manipulation</p>
+                        <p>Premiere: Premiere: August, 2018, International Computer Music Conference (ICMC), Daegu, South Korea</p>
+                    </div>
+                `
+            },
+            {
+                title: "Score",
+                icon: "fa-book-open-reader",
+                openByDefault: false,
+                content: `
+                    <div class="score-preview-box">
+                        <div class="score-info">
+                            <strong>Musical Score (PDF)</strong>
+                        </div>
+                        <a href="files/introscore.png" target="_blank" class="badge-btn"><i class="fa-solid fa-file-pdf"></i> View / Download Score (PDF)</a>
+                    </div>
+                `
+            },
+        ]
+    },
+    {
         id: "sample-1",
         tag: "EXAMPLE ONE",
         title: 'The Flock Takes Shelter in the Storm',
