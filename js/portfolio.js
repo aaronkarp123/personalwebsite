@@ -318,16 +318,16 @@ const PORTFOLIO_PROJECTS = [
                 content: `
                     <div class="art-gallery">
                         <div class="gallery-item">
-                            <img src="images/within0.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                            <img src="images/within0.JPG?auto=format&fit=crop&w=400&q=80" alt="">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/within1.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                            <img src="images/within1.JPG?auto=format&fit=crop&w=400&q=80" alt="">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/within2.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                            <img src="images/within2.JPG?auto=format&fit=crop&w=400&q=80" alt="">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/within3.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                            <img src="images/within3.JPG?auto=format&fit=crop&w=400&q=80" alt="">
                         </div>
                         
                     </div>
