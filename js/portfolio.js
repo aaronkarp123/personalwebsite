@@ -115,22 +115,22 @@ const PORTFOLIO_PROJECTS = [
                 content: `
                     <div class="art-gallery">
                         <div class="gallery-item">
-                            <img src="images/readwrite0.jpg" alt="Score Notation Artwork">
+                            <img src="images/readwrite0.jpg" alt="">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite1.jpg" alt="Score Notation Artwork">
+                            <img src="images/readwrite2.jpg" alt="">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite2.jpg" alt="Score Notation Artwork">
+                            <img src="images/readwrite1.jpg" alt="">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite3.jpg" alt="Score Notation Artwork">
+                            <img src="images/readwrite3.jpg" alt="">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite4.jpg" alt="Score Notation Artwork">
+                            <img src="images/readwrite4.jpg" alt="">
                         </div>
                         <div class="gallery-item">
-                            <img src="images/readwrite5.jpg" alt="Score Notation Artwork">
+                            <img src="images/readwrite5.jpg" alt="">
                         </div>
                     </div>
                 `
@@ -197,14 +197,28 @@ const PORTFOLIO_PROJECTS = [
                 content: `
                     <div class="art-gallery">
                         <div class="gallery-item">
-                            <img src="images/kaze0.jpg" alt="">
-                            <img src="images/kaze1.jpg" alt="">
-                            <img src="images/kaze2.jpg" alt="">
-                            <img src="images/kaze3.jpg" alt="">
-                            <img src="images/kaze4.jpg" alt="">
-                            <img src="images/kaze5.jpg" alt="">
-                            <img src="images/kaze6.jpg" alt="">
-                            <img src="images/kaze7.jpg" alt="">
+                            <img src="images/kaze0.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/kaze1.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/kaze2.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/kaze3.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/kaze4.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/kaze5.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/kaze6.jpg?auto=format&fit=crop&w=400&q=80" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/kaze7.jpg?auto=format&fit=crop&w=400&q=80" alt="">
                         </div>
                         
                     </div>
