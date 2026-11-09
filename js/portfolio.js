@@ -227,6 +227,51 @@ const PORTFOLIO_PROJECTS = [
         ]
     },
     {
+        id: "give-space",
+        tag: "Music",
+        title: 'Give Space [I]',
+        subtitle: "A semi-structured improvisational piece. Always leave room for growth.",
+        sections: [
+            {
+                title: "Audio Player",
+                icon: "fa-circle-play",
+                openByDefault: true,
+                content: `
+                    <div class="soundcloud-container">
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A728131531&color=%23dcccd4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/aaronkarp" title="Sophia Karp" target="_blank" style="color: #cccccc; text-decoration: none;">Sophia Karp</a> · <a href="https://soundcloud.com/aaronkarp/give-space-i" title="Give Space [I]" target="_blank" style="color: #cccccc; text-decoration: none;">Give Space [I]</a></div>
+                    </div>
+                `
+            },
+            {
+                title: "Technical Details",
+                icon: "fa-book-bookmark",
+                openByDefault: false,
+                content: `
+                    <div class="doc-text">
+                        <p>Form: Live Performance</p>
+                        <p>Completed: 2019</p>
+                        <p>Instrumentation: Cello, Electronics</p>
+                        <p>Sample Recording: Viola</p>
+                        <p>Performer: Sophia Karp</p>
+                    </div>
+                `
+            },
+            {
+                title: "Score",
+                icon: "fa-readme",
+                openByDefault: false,
+                content: `
+                    <div class="score-preview-box">
+                        <div class="score-info">
+                            <strong>Musical Score (PDF)</strong>
+                        </div>
+                        <a href="files/GiveSpace1.pdf" target="_blank" class="badge-btn"><i class="fa-solid fa-file-pdf"></i> View / Download Score (PDF)</a>
+                    </div>
+                `
+            },
+        ]
+    },
+    {
         id: "sample-1",
         tag: "EXAMPLE ONE",
         title: 'The Flock Takes Shelter in the Storm',
