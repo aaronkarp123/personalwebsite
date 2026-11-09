@@ -336,6 +336,51 @@ const PORTFOLIO_PROJECTS = [
         ]
     },
     {
+        id: "tare",
+        tag: "Music",
+        title: 'Tare',
+        subtitle: "A piece about pushing outwards, and if you can ever find your way back again.",
+        sections: [
+            {
+                title: "Audio Player",
+                icon: "fa-circle-play",
+                openByDefault: true,
+                content: `
+                    <div class="soundcloud-container">
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A494773980&color=%23dcccd4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/aaronkarp" title="Sophia Karp" target="_blank" style="color: #cccccc; text-decoration: none;">Sophia Karp</a> · <a href="https://soundcloud.com/aaronkarp/tare" title="Tare" target="_blank" style="color: #cccccc; text-decoration: none;">Tare</a></div>
+                    </div>
+                `
+            },
+            {
+                title: "Technical Details",
+                icon: "fa-book-bookmark",
+                openByDefault: false,
+                content: `
+                    <div class="doc-text">
+                        <p>Form: Live Performance</p>
+                        <p>Completed: 2018</p>
+                        <p>Instrumentation: String Quartet, Three Sorpanos, Reel-to-Reel Tape Machine</p>
+                        <p>Premiere: May, 2018</p>
+                        <p>Performers: Mivos String Quartet, Camilla Tassi, Marielle Brady, Memory Apata</p>
+                    </div>
+                `
+            },
+            {
+                title: "Score",
+                icon: "fa-book-open-reader",
+                openByDefault: false,
+                content: `
+                    <div class="score-preview-box">
+                        <div class="score-info">
+                            <strong>Musical Score (PDF)</strong>
+                        </div>
+                        <a href="files/Tare_score.pdf" target="_blank" class="badge-btn"><i class="fa-solid fa-file-pdf"></i> View / Download Score (PDF)</a>
+                    </div>
+                `
+            },
+        ]
+    },
+    {
         id: "sample-1",
         tag: "EXAMPLE ONE",
         title: 'The Flock Takes Shelter in the Storm',
