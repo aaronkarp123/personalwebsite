@@ -179,7 +179,7 @@ const PORTFOLIO_PROJECTS = [
             },
             {
                 title: "Documentation",
-                icon: "fa-readme",
+                icon: "fa-book-open-reader",
                 openByDefault: false,
                 content: `
                     <div class="score-preview-box">
@@ -258,7 +258,7 @@ const PORTFOLIO_PROJECTS = [
             },
             {
                 title: "Score",
-                icon: "fa-readme",
+                icon: "fa-book-open-reader",
                 openByDefault: false,
                 content: `
                     <div class="score-preview-box">
