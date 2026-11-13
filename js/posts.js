@@ -6,6 +6,7 @@
  */
 
 const BLOG_POSTS = [
+    /*
     {
         id: 3,
         title: "✨ Welcome to Sophia Karp's Y2K Cyber Zone!",
@@ -34,5 +35,5 @@ const BLOG_POSTS = [
             <p>Excited to share that my research paper on digital retro aesthetics has been officially published!</p>
             <p>You can read or download the PDF version over in the <a href="#publications" onclick="switchTab('publications')">Publications section</a>.</p>
         `
-    }
+    }*/
 ];

@@ -8,6 +8,65 @@
 
 const PORTFOLIO_PROJECTS = [
     {
+        id: "polar-cv",
+        tag: "Software",
+        title: 'Polar CV',
+        subtitle: "This is a VCV Rack module that generates control voltages that correspond to a point traveling along various polar equations.",
+        sections: [
+            {
+                title: "Technical Details",
+                icon: "fa-book-bookmark",
+                openByDefault: false,
+                content: `
+                    <div class="doc-text">
+                        <p>The red dot indicates the current position, which travels along the equation lines.</p>
+                        <p>The left-most control knob corresponds to the speed at which the dot travels (the <b>ΔΘ</b>). That can be adjusted by rotating the knob, or be controlled directly from a control voltage using the input to its left. The <b>mult</b> button to the upper left of the speed dial modifies the speed by a fixed amount. This is either 0.5x, 1.0x, or 2.0x.</p>
+                        <p>The current equation (along with the speed multiplier) can be seen in the top bar. There are a total of four different equations, which can be switched using the → and ← buttons. The equations all have two constants, <b>A</b> and <b>B</b>, which can be changed via the <b>A</b> and <b>B</b> knobs. Changing these values can create very different results, so I would encourage exploring different combinations of equations and constants.</p>
+                        <p>There are three outputs: <b>r</b> is the radius of the current position (in polar coordinates), <b>x</b> is the horizontal component of the current position (in cartesian coordinates), <b>y</b> is the vertical component of the current position (in cartesian coordinates)</p>
+                    </div>
+                `
+            },
+            {
+                title: "Links",
+                icon: "fa-link",
+                openByDefault: false,
+                content: `
+                <div class="doc-text">
+                    <p>Source code available on <a href="https://github.com/aaronkarp123/EarthTones" target="_blank">Github</a>.</p>
+                    <p>Module available for download from the <a href="https://library.vcvrack.com/AaronKarp-EarthTones/PolarCV" target="_blank">VCV Rack Plugin Library</a>.</p>
+                </div>
+                `
+            },
+            {
+                title: "Images",
+                icon: "fa-image",
+                openByDefault: false,
+                content: `
+                    <div class="art-gallery">
+                        <div class="gallery-item">
+                            <img src="images/polar0.png" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/polar2.png" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/polar3.png" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/polar4.png" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/polar5.png" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/polar6.png" alt="">
+                        </div>
+                    </div>
+                `
+            }
+        ]
+    },
+    {
         id: "the-flock",
         tag: "Sound Art Installation",
         title: 'The Flock Takes Shelter in the Storm',
