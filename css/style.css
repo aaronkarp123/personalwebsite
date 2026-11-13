@@ -30,7 +30,7 @@
 body {
     font-family: var(--font-body);
     color: #333;
-    padding: 20px 10px;
+    padding: 20px 0px;
     min-height: 100vh;
     position: relative;
     background-color: #ff9a9e;
@@ -167,7 +167,7 @@ body.sky-sunset .sky-layer {
 
 /* Main Content & Tabs */
 .content-area {
-    padding: 20px;
+    padding: 20px 15px;
     background: #fffafa;
 }
 
