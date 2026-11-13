@@ -388,6 +388,7 @@ body.sky-sunset .sky-layer {
     left: 0;
     width: 100%;
     height: 100%;
+    min-width:321px;
 }
 
 .bandcamp-container {
