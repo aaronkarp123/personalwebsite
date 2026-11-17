@@ -47,8 +47,9 @@ const BLOG_POSTS = [
             I'm also hoping this is a kick in my butt to start putting new things out there. Despite what my "Art & Music& section says, I *have* made things since 
             2022, I've just been very bad at putting them online. I endeavor to do better :prayer-hands:</p><br>
             <p>I also want to try keeping up with writing posts on this blog. I don't think I've had a blog since AP English Lit my senior year of high school.
-            I'm hoping to not recreate that experience 1:1, but if I end up reviewing The Road again you can't blame me, it's just muscle memory.</p>
-            <p> TEST </p>
+            I'm hoping to not recreate that experience 1:1, but if I end up reviewing The Road again you can't blame me, it's just muscle memory.</p><br>
+            <p>Also if you want to get email updates when I write new blog posts you can sign up using the very legit form box at the top of this page. I promise
+            I won't use your emails for anything nefarious <3</p>
         `
     }
 ];
