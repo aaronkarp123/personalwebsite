@@ -53,6 +53,14 @@ function initNavigation() {
             switchTab(targetId);
         });
     });
+    
+    // Handle browser Back/Forward buttons
+    window.addEventListener("popstate", () => {
+        const hash = window.location.hash.replace("#", "") || "about";
+        if (document.getElementById(hash)) {
+            switchTab(hash, false);
+        }
+    });
 
     // Check hash URL on initial load (e.g., website.com/#blog)
     const currentHash = window.location.hash.replace("#", "");
@@ -82,6 +90,11 @@ function switchTab(tabId) {
     }
     if (targetBtn) {
         targetBtn.classList.add("active");
+    }
+
+    // Update the URL without causing an abrupt anchor jump
+    if (updateHistory && window.location.hash !== `#${tabId}`) {
+        history.pushState(null, "", `#${tabId}`);
     }
 
     // Scroll smoothly to top of content
