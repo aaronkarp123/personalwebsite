@@ -9,7 +9,7 @@ const BLOG_POSTS = [
     /*{
         id: 3,
         title: "✨ Welcome to Sophia Karp's Y2K Cyber Zone!",
-        date: "2026-03-30",
+        date: "2026-03-30"
         tags: ["site-update", "y2k", "sky", "portfolio"],
         content: `
             <p>Welcome to my updated space! The site now features a dynamic sky background that randomly picks a sunrise 🌅 or sunset 🌆 every time you load the page!</p>
