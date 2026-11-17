@@ -8,10 +8,22 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     initRandomSkyBackground();
-    initNavigation();
     renderPortfolioProjects();
     renderBlogPosts();
+    initNavigation();
 });
+
+/**
+ * Safely update the URL hash on both http(s):// and local file:// previews
+ */
+function updateUrlHash(hash) {
+    if (window.location.hash === `#${hash}`) return;
+    try {
+        history.pushState(null, "", `#${hash}`);
+    } catch (err) {
+        window.location.hash = hash;
+    }
+}
 
 /**
  * Randomly chooses on page load whether background is a sunrise or sunset
@@ -29,19 +41,17 @@ function initRandomSkyBackground() {
         body.classList.remove("sky-sunrise");
     }
 
-    if (randomProf < 0.333333){
-        document.getElementById("sophiakprofile").src="images/Crop1.jpg";
-    }
-    else if (randomProf < 0.6666666){
-        document.getElementById("sophiakprofile").src="images/Crop2.jpg";
-    }
-    else {
-        document.getElementById("sophiakprofile").src="images/Crop3.jpg";
+    if (randomProf < 0.333333) {
+        document.getElementById("sophiakprofile").src = "images/Crop1.jpg";
+    } else if (randomProf < 0.6666666) {
+        document.getElementById("sophiakprofile").src = "images/Crop2.jpg";
+    } else {
+        document.getElementById("sophiakprofile").src = "images/Crop3.jpg";
     }
 }
 
 /**
- * Tab Navigation Handler
+ * Tab & Deep-Link Navigation Handler
  */
 function initNavigation() {
     const navButtons = document.querySelectorAll(".nav-btn");
@@ -54,30 +64,32 @@ function initNavigation() {
         });
     });
 
-    const handleUrlChange = () => {
-        const hash = window.location.hash.replace("#", "") || "about";
-        if (document.getElementById(hash)) {
+    const handleRoute = () => {
+        const hash = window.location.hash.replace("#", "");
+        if (!hash) {
+            switchTab("about", false);
+        } else if (hash.startsWith("post-")) {
+            openBlogPost(hash, null, false);
+        } else if (hash.startsWith("project-")) {
+            openPortfolioProject(hash, null, false);
+        } else if (document.getElementById(hash)) {
             switchTab(hash, false);
         }
     };
 
-    // Handle browser Back/Forward buttons on both http(s):// and file://
-    window.addEventListener("popstate", handleUrlChange);
-    window.addEventListener("hashchange", handleUrlChange);
+    window.addEventListener("popstate", handleRoute);
+    window.addEventListener("hashchange", handleRoute);
 
-    // Check hash URL on initial load (e.g., website.com/#blog)
-    const currentHash = window.location.hash.replace("#", "");
-    if (currentHash && document.getElementById(currentHash)) {
-        switchTab(currentHash, false);
+    // Check URL hash on initial page load
+    if (window.location.hash) {
+        handleRoute();
     }
 }
 
 /**
  * Switch Active Tab
- * @param {string} tabId 
- * @param {boolean} updateHistory
  */
-function switchTab(tabId, updateHistory = true) {
+function switchTab(tabId, updateHistory = true, scrollTop = true) {
     const navButtons = document.querySelectorAll(".nav-btn");
     const sections = document.querySelectorAll(".tab-section");
 
@@ -87,23 +99,88 @@ function switchTab(tabId, updateHistory = true) {
     const targetSection = document.getElementById(tabId);
     const targetBtn = document.querySelector(`.nav-btn[href="#${tabId}"]`);
 
-    if (targetSection) {
-        targetSection.classList.add("active");
-    }
-    if (targetBtn) {
-        targetBtn.classList.add("active");
+    if (targetSection) targetSection.classList.add("active");
+    if (targetBtn) targetBtn.classList.add("active");
+
+    if (updateHistory) {
+        updateUrlHash(tabId);
     }
 
-    if (updateHistory && window.location.hash !== `#${tabId}`) {
-        try {
-            history.pushState(null, "", `#${tabId}`);
-        } catch (err) {
-            // Fallback for local file:// previews where pushState is blocked
-            window.location.hash = tabId;
-        }
+    if (scrollTop) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+}
+
+/**
+ * Smoothly scroll to an element and flash a highlight border
+ */
+function highlightAndScrollTo(elementId) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    el.classList.remove("post-highlight");
+    void el.offsetWidth; // Force reflow so repeat clicks replay the animation
+    el.classList.add("post-highlight");
+}
+
+/**
+ * Open the Art & Music tab and jump to a specific portfolio project
+ */
+function openPortfolioProject(projectAnchor, event = null, updateHistory = true) {
+    if (event) event.preventDefault();
+
+    switchTab("art-music", false, false);
+
+    if (updateHistory) {
+        updateUrlHash(projectAnchor);
     }
 
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    highlightAndScrollTo(projectAnchor);
+}
+
+/**
+ * Open the Blog tab, clear active search filters, and jump to a specific post
+ */
+function openBlogPost(postAnchor, event = null, updateHistory = true) {
+    if (event) event.preventDefault();
+
+    switchTab("blog", false, false);
+
+    const searchInput = document.getElementById("blog-search");
+    if (searchInput && searchInput.value.trim() !== "") {
+        searchInput.value = "";
+        renderBlogPosts(BLOG_POSTS);
+    }
+
+    if (updateHistory) {
+        updateUrlHash(postAnchor);
+    }
+
+    highlightAndScrollTo(postAnchor);
+}
+
+/**
+ * Navigate to the item, update the URL, and copy the shareable link
+ */
+function copyShareLink(anchorId, btnElement) {
+    if (anchorId.startsWith("project-")) {
+        openPortfolioProject(anchorId);
+    } else if (anchorId.startsWith("post-")) {
+        openBlogPost(anchorId);
+    }
+
+    const shareUrl = `${window.location.href.split("#")[0]}#${anchorId}`;
+
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+            const originalHtml = btnElement.innerHTML;
+            btnElement.innerHTML = `<i class="fa-solid fa-check"></i> Copied!`;
+            setTimeout(() => {
+                btnElement.innerHTML = originalHtml;
+            }, 2000);
+        });
+    }
 }
 
 /**
@@ -119,6 +196,9 @@ function renderPortfolioProjects() {
     }
 
     container.innerHTML = PORTFOLIO_PROJECTS.map(project => {
+        const cleanId = String(project.id).replace(/[^a-zA-Z0-9-_]/g, "");
+        const projectAnchor = `project-${cleanId}`;
+
         const sectionsHtml = project.sections.map(sec => {
             const openAttr = sec.openByDefault ? "open" : "";
             return `
@@ -132,10 +212,19 @@ function renderPortfolioProjects() {
         }).join("");
 
         return `
-            <div class="project-card">
+            <div id="${projectAnchor}" class="project-card">
                 <div class="project-header">
-                    <span class="project-tag">${escapeHtml(project.tag)}</span>
-                    <h3 class="project-title">${escapeHtml(project.title)}</h3>
+                    <div class="project-top-row">
+                        <span class="project-tag">${escapeHtml(project.tag)}</span>
+                        <button type="button" class="link-btn copy-link-btn" onclick="copyShareLink('${projectAnchor}', this)">
+                            <i class="fa-solid fa-link"></i> Direct Link
+                        </button>
+                    </div>
+                    <h3 class="project-title">
+                        <a href="#${projectAnchor}" class="post-permalink" onclick="openPortfolioProject('${projectAnchor}', event)">
+                            ${escapeHtml(project.title)}
+                        </a>
+                    </h3>
                     <p class="project-subtitle">${escapeHtml(project.subtitle)}</p>
                 </div>
                 <div class="expandable-group">
@@ -147,8 +236,7 @@ function renderPortfolioProjects() {
 }
 
 /**
- * Render Blog Posts (with search filter support)
- * @param {Array} filteredPosts 
+ * Render Blog Posts (with search filter and individual permalinks)
  */
 function renderBlogPosts(filteredPosts = null) {
     const container = document.getElementById("blog-posts-container");
@@ -161,20 +249,34 @@ function renderBlogPosts(filteredPosts = null) {
         return;
     }
 
-    container.innerHTML = postsToRender.map(post => `
-        <article class="blog-post">
-            <div class="blog-post-header">
-                <h3 class="blog-title">💖 ${escapeHtml(post.title)}</h3>
-                <span class="blog-date"><i class="fa-regular fa-calendar"></i> ${post.date}</span>
-            </div>
-            <div class="blog-body">
-                ${post.content}
-                <div class="blog-tags">
-                    ${post.tags.map(tag => `<span class="tag">#${escapeHtml(tag)}</span>`).join("")}
+    container.innerHTML = postsToRender.map(post => {
+        const cleanId = String(post.slug || post.id).replace(/[^a-zA-Z0-9-_]/g, "");
+        const postAnchor = `post-${cleanId}`;
+
+        return `
+            <article id="${postAnchor}" class="blog-post">
+                <div class="blog-post-header">
+                    <h3 class="blog-title">
+                        <a href="#${postAnchor}" class="post-permalink" onclick="openBlogPost('${postAnchor}', event)">
+                            💖 ${escapeHtml(post.title)}
+                        </a>
+                    </h3>
+                    <div class="blog-meta">
+                        <span class="blog-date"><i class="fa-regular fa-calendar"></i> ${post.date}</span>
+                        <button type="button" class="link-btn copy-link-btn" onclick="copyShareLink('${postAnchor}', this)">
+                            <i class="fa-solid fa-link"></i> Direct Link
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </article>
-    `).join("");
+                <div class="blog-body">
+                    ${post.content}
+                    <div class="blog-tags">
+                        ${post.tags.map(tag => `<span class="tag">#${escapeHtml(tag)}</span>`).join("")}
+                    </div>
+                </div>
+            </article>
+        `;
+    }).join("");
 }
 
 /**

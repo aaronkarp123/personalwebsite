@@ -6,14 +6,12 @@
  * ==========================================================================
  */
 
-const PORTFOLIO_PROJECTS = [
-    {
+const PORTFOLIO_PROJECTS = [{
         id: "polar-cv",
         tag: "Software",
         title: 'Polar CV',
         subtitle: "This is a VCV Rack module that generates control voltages that correspond to a point traveling along various polar equations.",
-        sections: [
-            {
+        sections: [{
                 title: "Technical Details",
                 icon: "fa-book-bookmark",
                 openByDefault: false,
@@ -71,8 +69,7 @@ const PORTFOLIO_PROJECTS = [
         tag: "Sound Art Installation",
         title: 'The Flock Takes Shelter in the Storm',
         subtitle: "A soundscape collage, using recordings from hikes in Western Massachusetts and Rhode Island, and excerpts of a piece for solo cello performed by Benjamin Karp.",
-        sections: [
-            {
+        sections: [{
                 title: "Video Player",
                 icon: "fa-video",
                 openByDefault: true,
@@ -113,28 +110,25 @@ const PORTFOLIO_PROJECTS = [
         tag: "Music",
         title: 'Four Ways to Get Home',
         subtitle: "An exploratory transit EP",
-        sections: [
-            {
-                title: "Bandcamp Link",
-                icon: "fa-circle-play",
-                openByDefault: true,
-                content: `
+        sections: [{
+            title: "Bandcamp Link",
+            icon: "fa-circle-play",
+            openByDefault: true,
+            content: `
                     <div class="bandcamp-container">
                         <a href="https://oddegg.bandcamp.com/album/4-ways-to-get-home" target="_blank" >
                             <img src="https://f4.bcbits.com/img/a2603072358_10.jpg?auto=format" alt="Score Notation Artwork">
                         </a>
                     </div>
                 `
-            }
-        ]
+        }]
     },
     {
         id: "read-write",
         tag: "Sound Art Installation",
         title: 'Read / Write',
         subtitle: "What begins as a blank slate is transformed over the course of days and weeks as the paint brush slowly cuts down into the vinyl. The record turns from smooth static to rhythmic loops of noise that will continue to develop indefinitely as the micro movements of the bristles shift.",
-        sections: [
-            {
+        sections: [{
                 title: "Video Player",
                 icon: "fa-video",
                 openByDefault: true,
@@ -201,8 +195,7 @@ const PORTFOLIO_PROJECTS = [
         tag: "Sound Art Installation",
         title: '風は渡る 「the wind crosses」',
         subtitle: "This work creates a sonic equivalent to the visual experience of standing on the bridge nestled between the Western and Japanese homes. There are seven wind chimes in two different styles, which were derived from the architectural foci of the separate buildings, using stained glass and shouji respectively. While the visual field consists of a clear separation between Japan and the West, the sounds of the two different styles of wind chimes mix to create a palette that is neither clearly Japanese nor Western, but occupies a space in between. --- この作品は、西洋と日本の家をつなぐ橋に設置しており、その二つの建物が関係するサウンドスケープを作り出したものである。ステンドグラスと、障子戸を、別々の建物素材のモチーフとし、2つの異なるスタイルの7つの風鈴を用いている。それらは日本と西洋の明確な分離で構成されているが、2つの異なるスタイルの風鈴の音が混ざり合うことで、日本でも西洋でもないパレットの音色が生まれる。",
-        sections: [
-            {
+        sections: [{
                 title: "Video Player",
                 icon: "fa-video",
                 openByDefault: true,
@@ -290,8 +283,7 @@ const PORTFOLIO_PROJECTS = [
         tag: "Music",
         title: 'Give Space [I]',
         subtitle: "A semi-structured improvisational piece. Always leave room for growth.",
-        sections: [
-            {
+        sections: [{
                 title: "Audio Player",
                 icon: "fa-circle-play",
                 openByDefault: true,
@@ -335,8 +327,7 @@ const PORTFOLIO_PROJECTS = [
         tag: "Sound Art Installation",
         title: 'with in',
         subtitle: "An exploration of sociality through sound, sight, and time. Based on an algorithm that describes bird flocking patterns, this work bends the forces dictating behavior to continuously create new modes of interaction. Each time \'with in\' is run it develops in a unique way, such that each execution is different. This creation, sometimes sudden and other times gradual, is reflected in the modulation of a representative soundscape. The audience is both observer and disruptor as they exist inside of a generative process of building and breaking social connections. The work started every night at sundown and continued until sunrise, at which time the screen would be replaced with a countdown clock for the following sunset.'",
-        sections: [
-            {
+        sections: [{
                 title: "Video Player",
                 icon: "fa-video",
                 openByDefault: true,
@@ -399,8 +390,7 @@ const PORTFOLIO_PROJECTS = [
         tag: "Music",
         title: 'Tare',
         subtitle: "A piece about pushing outwards, and if you can ever find your way back again.",
-        sections: [
-            {
+        sections: [{
                 title: "Audio Player",
                 icon: "fa-circle-play",
                 openByDefault: true,
@@ -444,26 +434,23 @@ const PORTFOLIO_PROJECTS = [
         tag: "Sound Design",
         title: 'Traces',
         subtitle: "Sound design for a short film exploring social identity, community and evolution, originally created for an experimental spherical display.",
-        sections: [
-            {
-                title: "Video Player",
-                icon: "fa-video",
-                openByDefault: true,
-                content: `
+        sections: [{
+            title: "Video Player",
+            icon: "fa-video",
+            openByDefault: true,
+            content: `
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/U1ws99j5U8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 `
-            }
-        ]
+        }]
     },
     {
         id: "introduction",
         tag: "Music",
         title: 'Introduction',
         subtitle: "A journey towards and through disintegration.",
-        sections: [
-            {
+        sections: [{
                 title: "Audio Player",
                 icon: "fa-circle-play",
                 openByDefault: true,
@@ -506,8 +493,7 @@ const PORTFOLIO_PROJECTS = [
         tag: "Sound Art Installation",
         title: 'Restrained Form',
         subtitle: "This work is centered around restraint and its origins. A bass shaker underneath the wooden plank has three different frequencies running through it in isolation and combination. Each frequency accentuates the vibration of one of the three elements of the structure: the board, the sheet, and the rope. The sporatic bursts of energy give the structure a lifelike quality, accentuating its struggle and ultimate inability to escape.",
-        sections: [
-            {
+        sections: [{
                 title: "Video Player",
                 icon: "fa-video",
                 openByDefault: true,

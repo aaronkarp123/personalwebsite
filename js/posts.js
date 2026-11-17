@@ -6,8 +6,7 @@
  */
 
 const BLOG_POSTS = [
-    /*
-    {
+    /*{
         id: 3,
         title: "✨ Welcome to Sophia Karp's Y2K Cyber Zone!",
         date: "2026-03-30",

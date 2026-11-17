@@ -3,12 +3,18 @@
    ========================================================================== */
 :root {
     /* Pink Palette & Y2K Theme Colors */
-    --primary-pink: #ff69b4;       /* Hot Pink */
-    --dark-pink: #d10069;          /* Deep Pink */
-    --light-pink: #ffd1dc;         /* Soft Pink Fill */
-    --pastel-pink: #fff0f5;        /* Ultra Light Pink */
-    --neon-magenta: #ff007f;       /* Bright Accent Magenta */
-    --sparkle-yellow: #fff700;     /* Highlight Yellow */
+    --primary-pink: #ff69b4;
+    /* Hot Pink */
+    --dark-pink: #d10069;
+    /* Deep Pink */
+    --light-pink: #ffd1dc;
+    /* Soft Pink Fill */
+    --pastel-pink: #fff0f5;
+    /* Ultra Light Pink */
+    --neon-magenta: #ff007f;
+    /* Bright Accent Magenta */
+    --sparkle-yellow: #fff700;
+    /* Highlight Yellow */
 
     /* Typography */
     --font-heading: 'Press Start 2P', cursive, monospace;
@@ -157,7 +163,8 @@ body.sky-sunset .sky-layer {
     border-radius: 4px;
 }
 
-.nav-btn:hover, .nav-btn.active {
+.nav-btn:hover,
+.nav-btn.active {
     background: var(--primary-pink);
     color: #fff;
     border-style: inset;
@@ -167,7 +174,8 @@ body.sky-sunset .sky-layer {
 
 /* Main Content & Tabs */
 .content-area {
-    padding: 20px min(20px, 2%);;
+    padding: 20px min(20px, 2%);
+    ;
     background: #fffafa;
 }
 
@@ -388,7 +396,7 @@ body.sky-sunset .sky-layer {
     left: 0;
     width: 100%;
     height: 100%;
-    min-width:321px;
+    min-width: 321px;
 }
 
 .bandcamp-container {
@@ -602,11 +610,11 @@ body.sky-sunset .sky-layer {
         align-items: center;
         text-align: center;
     }
-    
+
     .glitch-title {
         font-size: 1.3rem;
     }
-    
+
     .nav-btn {
         width: 100%;
         text-align: center;
@@ -616,4 +624,51 @@ body.sky-sunset .sky-layer {
         flex-direction: column;
         text-align: center;
     }
+}
+
+.project-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.post-permalink {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post-permalink:hover {
+    text-decoration: underline;
+}
+
+.post-highlight {
+    animation: highlightFlash 1.8s ease-out;
+}
+
+@keyframes highlightFlash {
+    0% { box-shadow: 0 0 0 4px #ff69b4; }
+    100% { box-shadow: none; }
+}
+
+
+.link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    /*background: var(--light-pink);*/
+    color: var(--dark-pink);
+    padding: 6px 12px;
+    border: 2px outset #ffa6c9;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.link-btn:hover {
+    background: var(--light-pink);
+    color: #fff;
 }
