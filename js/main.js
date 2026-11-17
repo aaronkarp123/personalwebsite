@@ -308,3 +308,8 @@ function filterBlogPosts() {
 function escapeHtml(str) {
     return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
+
+
+if (typeof module !== "undefined") {
+    module.exports = BLOG_POSTS;
+}
