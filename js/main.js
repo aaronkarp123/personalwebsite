@@ -53,7 +53,7 @@ function initNavigation() {
             switchTab(targetId);
         });
     });
-    
+
     // Handle browser Back/Forward buttons
     window.addEventListener("popstate", () => {
         const hash = window.location.hash.replace("#", "") || "about";
@@ -65,7 +65,7 @@ function initNavigation() {
     // Check hash URL on initial load (e.g., website.com/#blog)
     const currentHash = window.location.hash.replace("#", "");
     if (currentHash && document.getElementById(currentHash)) {
-        switchTab(currentHash);
+        switchTab(currentHash, false);
     }
 }
 
