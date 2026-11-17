@@ -54,13 +54,16 @@ function initNavigation() {
         });
     });
 
-    // Handle browser Back/Forward buttons
-    window.addEventListener("popstate", () => {
+    const handleUrlChange = () => {
         const hash = window.location.hash.replace("#", "") || "about";
         if (document.getElementById(hash)) {
             switchTab(hash, false);
         }
-    });
+    };
+
+    // Handle browser Back/Forward buttons on both http(s):// and file://
+    window.addEventListener("popstate", handleUrlChange);
+    window.addEventListener("hashchange", handleUrlChange);
 
     // Check hash URL on initial load (e.g., website.com/#blog)
     const currentHash = window.location.hash.replace("#", "");
@@ -72,16 +75,15 @@ function initNavigation() {
 /**
  * Switch Active Tab
  * @param {string} tabId 
+ * @param {boolean} updateHistory
  */
-function switchTab(tabId) {
+function switchTab(tabId, updateHistory = true) {
     const navButtons = document.querySelectorAll(".nav-btn");
     const sections = document.querySelectorAll(".tab-section");
 
-    // Remove active class from all buttons and sections
     navButtons.forEach(btn => btn.classList.remove("active"));
     sections.forEach(sec => sec.classList.remove("active"));
 
-    // Find and activate target section
     const targetSection = document.getElementById(tabId);
     const targetBtn = document.querySelector(`.nav-btn[href="#${tabId}"]`);
 
@@ -92,12 +94,15 @@ function switchTab(tabId) {
         targetBtn.classList.add("active");
     }
 
-    // Update the URL without causing an abrupt anchor jump
     if (updateHistory && window.location.hash !== `#${tabId}`) {
-        history.pushState(null, "", `#${tabId}`);
+        try {
+            history.pushState(null, "", `#${tabId}`);
+        } catch (err) {
+            // Fallback for local file:// previews where pushState is blocked
+            window.location.hash = tabId;
+        }
     }
 
-    // Scroll smoothly to top of content
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
