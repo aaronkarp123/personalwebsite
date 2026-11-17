@@ -263,7 +263,7 @@ function renderBlogPosts(filteredPosts = null) {
                     </h3>
                     <div class="blog-meta">
                         <span class="blog-date"><i class="fa-regular fa-calendar"></i> ${post.date}</span>
-                        <button type="button" class="link-btn copy-link-btn" onclick="copyShareLink('${postAnchor}', this)">
+                        &nbsp;&nbsp;&nbsp;<button type="button" class="link-btn copy-link-btn" onclick="copyShareLink('${postAnchor}', this)">
                             <i class="fa-solid fa-link"></i> Direct Link
                         </button>
                     </div>
