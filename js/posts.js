@@ -37,7 +37,7 @@ const BLOG_POSTS = [
     }*/
     {
         id: 1,
-        slug: "welcome",
+        slug: "welcome-post",
         title: "Welcome to my website!",
         date: "2026-11-17",
         tags: [],
